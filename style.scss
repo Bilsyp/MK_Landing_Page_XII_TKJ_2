@@ -28,7 +28,7 @@ main {
     position: absolute;
     // left: 50%;
     // transform: translateX(-50%);
-    transition: 8s;
+    transition: 800ms;
     background-color: rgba(0, 0, 0, 0.2);
     border: 1px solid white;
   }
@@ -40,6 +40,7 @@ main {
     // opacity: 1;
   }
   .btnShow[data-up="off"] {
+    transition: 2s;
     top: 50%;
   }
   .btnShow[data-up="on"] {
@@ -198,4 +199,32 @@ aside[data-show="off"] {
 }
 aside[data-show="on"] {
   left: 0;
+}
+.card-images {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .card-images {
+    display: flex;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-images {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .card-images {
+    display: none;
+  }
+  body {
+    background: white !important;
+  }
+  .btnShow[data-up="on"] {
+    top: 20% !important;
+  }
+  .card {
+    max-width: 80%;
+  }
 }

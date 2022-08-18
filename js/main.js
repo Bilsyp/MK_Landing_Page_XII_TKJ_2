@@ -12,7 +12,7 @@ $(document).ready(function () {
       $(".btnShow").html("Show Form");
     }
 
-    $(".card").slideToggle(5000);
+    $(".card").slideToggle(800);
     $(".card-images img").slideToggle(7000);
 
     e.preventDefault();
